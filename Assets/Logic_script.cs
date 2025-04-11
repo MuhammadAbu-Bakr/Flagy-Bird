@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-
 public class Logic_script : MonoBehaviour
 {
     public int playerScore;
@@ -10,13 +9,10 @@ public class Logic_script : MonoBehaviour
     public Button restartButton;
     public GameObject gameOverScreen;
 
-
     void Start()
     {
-        // If you assigned the button in the inspector
         if (restartButton != null)
         {
-            // Add a listener to the button click event
             restartButton.onClick.AddListener(RestartButtonClicked);
         }
     }
@@ -28,7 +24,6 @@ public class Logic_script : MonoBehaviour
         scoreText.text = playerScore.ToString();
     }
     
-    // This is the function that should appear in the button's OnClick menu
     public void RestartButtonClicked()
     {
         Debug.Log("Restart button clicked!");
@@ -42,7 +37,5 @@ public class Logic_script : MonoBehaviour
     public void GameOver()
     {
         gameOverScreen.SetActive(true);
-
     }
-
 }
